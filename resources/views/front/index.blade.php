@@ -16,6 +16,7 @@
             <div class="header-content">
                 <h4 class="header-subtitle" >Hallo, kami dari</h4>
                 <h1 class="header-title">Kelompok 9</h1>
+                <h1 class="header-title">SIKC 3B</h1>
                 <h6 class="header-mono" >Politeknik Negeri Banjarmasin</h6>
             </div>
         </div>
@@ -50,7 +51,7 @@
     </nav>
     <div class="container-fluid">
         <div id="about" class="row about-section">
-        <div class="col-lg-4 about-card">
+            <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Profil Rizky Maulida</h3>
                 <span class="line mb-5"></span>
                 <ul class="mt40 info list-unstyled">
@@ -140,7 +141,7 @@
                             <P class="subtitle">Jl. Brig Jend. Hasan Basri, Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70124.</P>
                             <hr>
                             <h6 class="title text-danger">2020 - 2023</h6>
-                            <P>SMAN 10 Banjarmasin</P>
+                            <P>SMA Negeri 10 Banjarmasin</P>
                             <P class="subtitle">Jalan Lingkar Dalam Selatan No. 51, RT 28, Kelayan Selatan, Kecamatan Banjarmasin Selatan, Kota Banjarmasin, Provinsi Kalimantan Selatan, Kode Pos 70246.</P>
                             <hr>
                             <h6 class="title text-danger">2017 - 2020</h6>
