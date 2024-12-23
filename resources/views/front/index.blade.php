@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Profil Kelompok 9')
+@section('title', 'Inventaris Sekolah')
 @section('content')
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -14,10 +14,9 @@
                 <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
             </ul>  
             <div class="header-content">
-                <h4 class="header-subtitle" >Hallo, kami dari</h4>
-                <h1 class="header-title">Kelompok 9</h1>
-                <h1 class="header-title">SIKC 3B</h1>
-                <h6 class="header-mono" >Politeknik Negeri Banjarmasin</h6>
+                <h1 class="header-title">Aplikasi Monitoring</h1>
+                <h1 class="header-title">Inventaris Sekolah</h1>
+                <h6 class="header-mono" >SIKC 3B | Politeknik Negeri Banjarmasin</h6>
             </div>
         </div>
     </header>
@@ -32,16 +31,16 @@
                         <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#resume" class="nav-link">Resume</a>
+                        <a href="#resume" class="nav-link">Inventaris Sekolah</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav brand">
                     <img src="assets/imgs/avatar.png" alt="" class="brand-img">
                     <li class="brand-txt">
-                        <h5 class="brand-title">Kelompok 9</h5>
+                        <h5 class="brand-title">Teknik Elektro</h5>
                         <div class="brand-subtitle">D4 Sistem Informasi Kota Cerdas</div>
                     </li>
                 </ul>
@@ -51,196 +50,117 @@
     </nav>
     <div class="container-fluid">
         <div id="about" class="row about-section">
+            @foreach ($profils as $profil)
             <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Profil Rizky Maulida</h3>
+                <h3 class="font-weight-light">Profil {{ $profil->nama }}</h3>
                 <span class="line mb-5"></span>
-                <ul class="mt40 info list-unstyled">
-                    <li><span>Nama</span> : Rizky Maulida</li>
-                    <li><span>NIM</span> : C050423020</li>
-                    <li><span>Tanggal Lahir</span> : 19/04/2005</li>
-                    <li><span>Email</span> : maulidarizky882@gmail.com</li>
-                    <li><span>No.HP</span> : +6285786615902</li>
-                    <li><span>GitHub</span> : maulida34</li>
-                    <li><span>Alamat</span> : Komp. Mantuil Raya blok P3 no 83.</li>
+                <ul class="info list-unstyled">
+                    <li><span>Nama</span>: {{ $profil->nama }}</li>
+                    <li><span>NIM</span>: {{ $profil->nim }}</li>
+                    <li><span>Tanggal Lahir</span>: {{ $profil->tgl_lahir }}</li>
+                    <li><span>Email</span>: {{ $profil->email }}</li>
+                    <li><span>No.HP</span>: {{ $profil->no_hp }}</li>
+                    <li><span>GitHub</span>: {{ $profil->github }}</li>
+                    <li><span>Alamat</span>: {{ $profil->alamat }}</li>
                 </ul>
-                <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
-                </ul>  
             </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Profil Imelda Soraya</h3>
-                <span class="line mb-5"></span>
-                <ul class="mt40 info list-unstyled">
-                    <li><span>Nama</span> : Imelda Soraya</li>
-                    <li><span>NIM</span> : C050423027</li>
-                    <li><span>Tanggal Lahir</span> : 10/01/2006</li>
-                    <li><span>Email</span> : imeldasoraya06@gmail.com</li>
-                    <li><span>No.HP</span> : +6283141777382</li>
-                    <li><span>GitHub</span> : imeldasoraya </li>
-                    <li><span>Alamat</span> :  Jl. 09 Oktober, Pekauman</li>
-                </ul>
-                <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
-                </ul>  
-            </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Keahlian kami</h3>
-                <span class="line mb-5"></span>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-widget icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Backend Development</h6>
-                        <p class="subtitle"> Menggunakan bahasa seperti PHP (Laravel)</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-paint-bucket icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Frontend Development</h6>
-                        <p class="subtitle">Menggunakan teknologi seperti HTML, CSS, JavaScript</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-stats-up icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Mobile Programming</h6>
-                        <p class="subtitle">Mengembangkan aplikasi native di Android (Java/Kotlin)</p>
-                        <hr>
-                    </div>
-                </div>
+            @endforeach           
             </div>
         </div>
-    </div>
-
-    <!--Resume Section-->
-    <section class="section" id="resume">
-        <div class="container">
-            <h2 class="mb-5"><span class="text-danger">Resume</span> kami</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="mt-2">
-                                <h4>Pendidikan Rizky Maulida</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="title text-danger">2023 - Present</h6>
-                            <P>Politeknik Negeri Banjarmasin</P>
-                            <P class="subtitle">Jl. Brig Jend. Hasan Basri, Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70124.</P>
-                            <hr>
-                            <h6 class="title text-danger">2020 - 2023</h6>
-                            <P>SMA Negeri 10 Banjarmasin</P>
-                            <P class="subtitle">Jalan Lingkar Dalam Selatan No. 51, RT 28, Kelayan Selatan, Kecamatan Banjarmasin Selatan, Kota Banjarmasin, Provinsi Kalimantan Selatan, Kode Pos 70246.</P>
-                            <hr>
-                            <h6 class="title text-danger">2017 - 2020</h6>
-                            <P>SMP Negeri 20 Banjarmasin</P>
-                            <P class="subtitle">Jl. Mantuil, Kuin Kecil, Kec. Aluh-Aluh, Kabupaten Banjar, Kalimantan Selatan 70244</P>
-                        </div>
-                    </div>
+        <section class="section" id="resume">
+            <div class="container">
+                <h2 class="mb-5"><span class="text-danger">Inventaris</span> Sekolah</h2>
+            <div class="container-fluid">
+                <div id="about" class="row about-section">
+                @foreach ($barangs as $barang)
+                <div class="col-lg-4 about-card">
+                    <h3 class="font-weight-light">Barang {{ $barang->nama_barang }}</h3>
+                    <span class="line mb-5"></span>
+                    <ul class="info list-unstyled">
+                        <li><span>Nama</span>: {{ $barang->nama_barang }}</li>
+                        <li><span>NIM</span>: {{ $barang->id_kategori }}</li>
+                        <li><span>Tanggal Lahir</span>: {{ $barang->spesifikasi }}</li>
+                        <li><span>Email</span>: {{ $barang->kondisi }}</li>
+                        <li><span>No.HP</span>: {{ $barang->tanggal_pengadaan }}</li>
+                        <li><span>GitHub</span>: {{ $barang->jumlah }}</li>
+                    </ul>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="mt-2">
-                                <h4>Pendidikan Imelda Soraya</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="title text-danger">2023 - Present</h6>
-                            <P>Politeknik Negeri Banjarmasin</P>
-                            <P class="subtitle">Jl. Brig Jend. Hasan Basri, Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70124.</P>
-                            <hr>
-                            <h6 class="title text-danger">2020 - 2023</h6>
-                            <P>SMA Negeri 1 Banjarmasin</P>
-                            <P class="subtitle">Jl. Mulawarman No.25, Tlk. Dalam, Kec. Banjarmasin Tengah, Kota Banjarmasin, Kalimantan Selatan 70115.</P>
-                            <hr>
-                            <h6 class="title text-danger">2017 - 2020</h6>
-                            <P>SMP Negeri 4 Banjarmasin</P>
-                            <P class="subtitle">Jl. Teluk Tiram Darat No.10, RT.8, Tlk. Tiram, Kec. Banjarmasin Bar., Kota Banjarmasin, Kalimantan Selatan 70113.</P>
-                            
-                        </div>
-                    </div>
+                @endforeach
+            </div>
+            <div class="container-fluid">
+                <div id="about" class="row about-section">
+                @foreach ($kategoriBarangs as $kategori)
+                <div class="col-lg-4 about-card">
+                    <h3 class="font-weight-light">Kategori Barang {{ $kategori->nama_kategori }}</h3>
+                    <span class="line mb-5"></span>
+                    <ul class="info list-unstyled">
+                        <li><span>Nama Kategori</span>: {{ $kategori->nama_kategori }}</li>
+                        <li><span>Deskripsi</span>: {{ $kategori->deskripsi }}</li>
+                    </ul>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2">Keterampilan Rizky Maulida</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2">
-                           <h6>hTL5 &amp; CSS3</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 88%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>JavaScript</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>PHP</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>SQL</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2">Keterampilan Imelda Soraya</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2">
-                           <h6>hTL5 &amp; CSS3</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 88%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>JavaScript</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>PHP</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>SQL</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
+                @endforeach
+            </div>
+            <div class="container-fluid">
+                <div id="about" class="row about-section">
+                @foreach ($sekolahs as $sekolah)
+                <div class="col-lg-4 about-card">
+                    <h3 class="font-weight-light">Sekolah {{ $sekolah->nama_sekolah }}</h3>
+                    <span class="line mb-5"></span>
+                    <ul class="info list-unstyled">
+                        <li><span>Nama Sekolah</span>: {{ $sekolah->nama_sekolah }}</li>
+                        <li><span>Alamat</span>: {{ $sekolah->alamat }}</li>
+                        <li><span>Telepon</span>: {{ $sekolah->telepon }}</li>
+                        <li><span>Email</span>: {{ $sekolah->email }}</li>
+                    </ul>
+                </div>
+                @endforeach
+            </div>
+            <div class="container-fluid">
+                <div id="about" class="row about-section">
+                @foreach ($stoks as $stok)
+                <div class="col-lg-4 about-card">
+                    <h3 class="font-weight-light">Stok {{ $stok->id_sekolah }}</h3>
+                    <span class="line mb-5"></span>
+                    <ul class="info list-unstyled">
+                        <li><span>Sekolah</span>: {{ $stok->id_sekolah }}</li>
+                        <li><span>Barang</span>: {{ $stok->id_barang }}</li>
+                        <li><span>Jumlah Stok</span>: {{ $stok->jumlah_stok }}</li>
+                    </ul>
+                </div>
+                @endforeach
+            </div>
+            <div class="container-fluid">
+                <div id="about" class="row about-section">
+                @foreach ($transaksis as $transaksi)
+                <div class="col-lg-4 about-card">
+                    <h3 class="font-weight-light">Transaksi {{ $transaksi->id_sekolah }}</h3>
+                    <span class="line mb-5"></span>
+                    <ul class="info list-unstyled">
+                        <li><span>Sekolah</span>: {{ $transaksi->id_sekolah }}</li>
+                        <li><span>Barang</span>: {{ $transaksi->id_barang }}</li>
+                        <li><span>Tanggal Transaksi</span>: {{ $transaksi->tanggal_transaksi }}</li>
+                        <li><span>Jumlah</span>: {{ $transaksi->jumlah }}</li>
+                        <li><span>Jenis Transaksi</span>: {{ $transaksi->jenis_transaksi }}</li>
+                        <li><span>Keterangan</span>: {{ $transaksi->keterangan }}</li>
+                    </ul>
+                </div>
+                @endforeach
                 </div>
             </div>
-        </div>
-    </section>
-
-        </div>
-    </div>
-    <footer class="footer py-3">
-        <div class="container">
-            <p class="small mb-0 text-light">
-                &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">DevCRUD</span></a> 
-            </p>
-        </div>
-    </footer>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>           
+            <footer class="footer py-3">
+                <div class="container text-center">
+                    <p class="small mb-0 text-light">
+                        &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">DevCRUD</span></a> 
+                    </p>
+                </div>
+            </footer>
+            </div>
+            @endsection
 
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
@@ -259,4 +179,4 @@
     <script src="assets/js/johndoe.js"></script>
 
 </body>
-</html>
+</html
